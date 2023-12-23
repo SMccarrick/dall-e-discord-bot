@@ -1,0 +1,23 @@
+{
+  "name": "discord-diffusion-bot",
+  "version": "1.0.0",
+  "description": "A stable diffusion discord bot using slash commands",
+  "main": "index.js",
+  "scripts": {
+    "start": "bun src/bot.ts",
+    "format": "bunx @biomejs/biome format src/**/* --write",
+    "lint": "bunx @biomejs/biome lint src/**/*"
+  },
+  "dependencies": {
+    "discord.js": "^14.14.1",
+    "openai": "^4.24.1",
+    "zod": "^3.22.4"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "^1.4.1",
+    "bun-types": "^1.0.19",
+    "typescript": "^5.3.3"
+  }
+}
