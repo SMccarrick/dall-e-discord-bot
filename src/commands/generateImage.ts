@@ -14,7 +14,7 @@ export const GenerateImage: Command = {
 	options: [
 		{
 			name: "prompt",
-			description: "The prompt for image generation",
+			description: "Enter a prompt to generate an image",
 			type: ApplicationCommandOptionType.String,
 			required: true,
 		},
@@ -37,7 +37,7 @@ export const GenerateImage: Command = {
 				});
 			}
 		} catch (error) {
-			console.error(`Error generating and image ${error}`);
+			console.error(`Error generating an image ${error}`);
 		}
 	},
 };
