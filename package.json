@@ -1,7 +1,7 @@
 {
-  "name": "discord-diffusion-bot",
+  "name": "dall-e-discord-bot",
   "version": "1.0.0",
-  "description": "A stable diffusion discord bot using slash commands",
+  "description": "A Discord bot for generating images using OpenAI's DALL-E 3 model with slash commands",
   "main": "index.js",
   "scripts": {
     "start": "bun src/bot.ts",
