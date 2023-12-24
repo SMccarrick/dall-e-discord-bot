@@ -9,7 +9,7 @@ const client = new Client({
 	intents: [],
 });
 
-client.login(envConfig.DISCORD_SECRET);
+client.login(envConfig.DISCORD_BOT_SECRET);
 
 ready(client);
 interactionCreate(client);
