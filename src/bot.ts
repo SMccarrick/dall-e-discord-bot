@@ -13,5 +13,3 @@ client.login(envConfig.DISCORD_BOT_SECRET);
 
 ready(client);
 interactionCreate(client);
-
-console.info(client);
