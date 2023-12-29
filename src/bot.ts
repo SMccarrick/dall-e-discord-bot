@@ -7,9 +7,22 @@ console.info("Bot is starting...");
 
 const client = new Client({
   intents: [GatewayIntentBits.Guilds, GatewayIntentBits.GuildMessages],
+  failIfNotExists: true,
 });
 
-client.login(envConfig.DISCORD_BOT_SECRET);
+client.on("error", (error) => {
+  console.error("A client error occurred:", error);
+});
 
-ready(client);
-interactionCreate(client);
+client
+  .login(envConfig.DISCORD_BOT_SECRET)
+  .then(() => {
+    ready(client);
+    interactionCreate(client);
+  })
+  .catch((error) => {
+    console.error(
+      "Failed to log in, please make sure you provide a valid discord bot secret:",
+      error,
+    );
+  });
