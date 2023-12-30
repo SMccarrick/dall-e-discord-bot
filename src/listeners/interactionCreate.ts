@@ -1,11 +1,13 @@
-import { CommandInteraction, Client, Interaction } from "discord.js";
+import { Client, CommandInteraction, Interaction } from "discord.js";
 import { commands } from "../commands";
 
 const handleSlashCommand = async (
   client: Client,
   interaction: CommandInteraction,
 ): Promise<void> => {
-  const slashCommand = commands.find((c) => c.name === interaction.commandName);
+  const slashCommand = commands.find(
+    (command) => command.name === interaction.commandName,
+  );
   if (!slashCommand) {
     interaction.followUp({ content: "An error has occurred" });
     return;

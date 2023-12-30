@@ -1,11 +1,11 @@
 import {
-  Client,
-  ApplicationCommandType,
-  CommandInteraction,
   ApplicationCommandOptionType,
+  ApplicationCommandType,
+  Client,
+  CommandInteraction,
 } from "discord.js";
-import { Command } from "./interfaces";
 import openAI from "../services/open-ai";
+import { Command } from "./interfaces";
 
 export const GenerateImage: Command = {
   name: "gen",
