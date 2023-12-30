@@ -1,7 +1,10 @@
 services:
   - type: web
-    name: bun
-    env: docker
-    repo: https://github.com/SMccarrick/dall-e-discord-bot
     plan: starter
+    name: dall-e-3-discord-bot
+    repo: https://github.com/SMccarrick/dall-e-discord-bot
+    docker:
+      image: oven/bun
+    env:
+      - group: Dall-E 3 discord bot
     autoDeploy: false
